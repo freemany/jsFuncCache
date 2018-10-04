@@ -1,4 +1,4 @@
-function funcCache() {
+function funcCache(test) {
     const result = {};
 
     function getKey(func, params) {
@@ -21,7 +21,9 @@ function funcCache() {
 
         if (undefined === result[key]) {
             result[key] = func.apply(func, argv);
-            console.log('No cache: ', func.name, argv);
+            if (true === test) {
+                console.log('No cache: ', func.name, argv);
+            }
         }
 
         return result[key];

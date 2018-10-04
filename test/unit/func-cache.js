@@ -23,7 +23,7 @@ describe('funcCache.js', () => {
 
     describe('test cache and return result', () => {
         it('cache and return with arguments as number', () => {
-            const c = funcCache();
+            const c = funcCache(true);
             const plus = (x, y) => {
                 return x + y;
             };
@@ -36,7 +36,7 @@ describe('funcCache.js', () => {
         });
 
         it('cache and return with arguments as object', () => {
-            const c = funcCache();
+            const c = funcCache(true);
             const plus = (obj) => {
                 return obj.x + obj.y;
             };
@@ -50,7 +50,7 @@ describe('funcCache.js', () => {
         });
 
         it('cache and return with arguments as array', () => {
-            const c = funcCache();
+            const c = funcCache(true);
             const plus = (arr) => {
                 return arr[0] + arr[1];
             };
@@ -64,7 +64,7 @@ describe('funcCache.js', () => {
         });
 
         it('it should cache method as well', () => {
-            const c = funcCache();
+            const c = funcCache(true);
 
             class Math {
                 plus(arr) {
