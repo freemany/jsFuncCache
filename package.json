@@ -1,0 +1,30 @@
+{
+  "name": "FunctionCacheJs",
+  "version": "1.0.0",
+  "description": "Cache for functions",
+  "main": "index.js",
+  "scripts": {
+    "test:unit": "mocha ./test/unit/**/* --require test/global.js",
+    "test:unit:watch": "mocha ./test/unit/**/* --require test/global.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freemany/jsFuncCache.git"
+  },
+  "keywords": [],
+  "author": "Freeman Yam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freemany/jsFuncCache/issues"
+  },
+  "homepage": "https://github.com/freemany/jsFuncCache#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
