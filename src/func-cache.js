@@ -8,7 +8,7 @@ function funcCache() {
     return function() {
 
         if (arguments.length < 1 || typeof arguments[0] !== 'function') {
-            throw new Error('Function name should be there')
+            throw new Error('First argument should be a function')
         }
         let argv = [];
         for(const k in arguments) {
