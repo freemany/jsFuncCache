@@ -62,5 +62,24 @@ describe('funcCache.js', () => {
             expect(c(plus, [3,2])).to.eql(plus([3,2]));
             expect(c(plus, [3,2])).to.eql(plus([3,2]));
         });
+
+        it('it should cache method as well', () => {
+            const c = funcCache();
+
+            class Math {
+                plus(arr) {
+                    return arr[0] + arr[1];
+                }
+            }
+
+            const m = new Math();
+
+            expect(c(m.plus, [1,2])).to.eql(m.plus([1,2]));
+            expect(c(m.plus, [1,2])).to.eql(m.plus([1,2]));
+            expect(c(m.plus, [2,2])).to.eql(m.plus([2,2]));
+            expect(c(m.plus, [2,2])).to.eql(m.plus([2,2]));
+            expect(c(m.plus, [3,2])).to.eql(m.plus([3,2]));
+            expect(c(m.plus, [3,2])).to.eql(m.plus([3,2]));
+        });
     });
 });
